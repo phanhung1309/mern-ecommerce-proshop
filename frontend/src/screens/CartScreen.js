@@ -28,6 +28,7 @@ const CartScreen = () => {
 
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id))
+    navigate('/cart')
   }
 
   const checkoutHandler = () => {
