@@ -5,10 +5,11 @@ import {
   registerUser,
   getUserProfile,
   updateUserProfile,
+  getUsers,
 } from '../controllers/userController'
-import { protect } from '../middleware/authMiddleware'
+import { protect, admin } from '../middleware/authMiddleware'
 
-router.route('/').post(registerUser)
+router.route('/').post(registerUser).get(protect, admin, getUsers)
 router.post('/login', authUser)
 router
   .route('/profile')
