@@ -5,6 +5,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import FormContainer from '../components/FormContainer'
 import { listProductDetails, updateProduct } from '../actions/productActions'
 import {
@@ -100,6 +101,7 @@ const ProductEditScreen = () => {
 
   return (
     <>
+      <Meta title='Admin | Edit product' />
       <Link to='/admin/productlist' className='btn btn-light my-3'>
         Go Back
       </Link>

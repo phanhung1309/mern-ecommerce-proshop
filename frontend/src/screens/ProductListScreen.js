@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
+import Meta from '../components/Meta'
 import {
   listProducts,
   deleteProduct,
@@ -76,6 +77,7 @@ const ProductListScreen = () => {
 
   return (
     <>
+      <Meta title='Admin | Product List' />
       <Row className='align-items-center'>
         <Col>
           <h1>Products</h1>

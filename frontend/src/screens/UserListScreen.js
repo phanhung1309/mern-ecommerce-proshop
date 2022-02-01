@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import { listUsers, deleteUser } from '../actions/userActions'
 
 const UserListScreen = () => {
@@ -36,6 +37,7 @@ const UserListScreen = () => {
 
   return (
     <>
+      <Meta title='Admin | User List' />
       <h1>Users</h1>
       {loading ? (
         <Loader />

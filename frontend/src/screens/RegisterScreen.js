@@ -4,6 +4,7 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import FormContainer from '../components/FormContainer'
 import { register } from '../actions/userActions'
 
@@ -42,6 +43,7 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
+      <Meta title='Register' />
       <h1>Sign Up</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}

@@ -3,6 +3,7 @@ import { Link, useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
 const CartScreen = () => {
@@ -35,6 +36,7 @@ const CartScreen = () => {
 
   return (
     <Row>
+      <Meta title='Shopping Cart' />
       <Col md={8}>
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (

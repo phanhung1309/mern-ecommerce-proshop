@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams, Link } from 'react-router-dom'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import Meta from '../components/Meta'
 import {
   deliverOrder,
   getOrderDetails,
@@ -76,6 +77,7 @@ const OrderScreen = () => {
     <Message variant='danger'>{error}</Message>
   ) : (
     <>
+      <Meta title='Order Details' />
       <h1>Order {order._id}</h1>
       <Row>
         <Col md={8}>

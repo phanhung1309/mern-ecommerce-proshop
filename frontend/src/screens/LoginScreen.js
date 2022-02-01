@@ -4,6 +4,7 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
+import Meta from '../components/Meta'
 import FormContainer from '../components/FormContainer'
 import { login } from '../actions/userActions'
 
@@ -35,6 +36,7 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
+      <Meta title='Login' />
       <h1>Sign In</h1>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader />}
